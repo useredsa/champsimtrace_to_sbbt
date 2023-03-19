@@ -23,9 +23,9 @@ Alternatively (since it is only necessary to compile and link two files) you can
 
 ## Running
 
-The program receives two arguments, the original trace and the basename (name without extension) of the new SBBT trace.
+The program receives two arguments, the original trace and the filename (with `.sbbt.zst` extension) of the new SBBT trace.
 ```sh
-champsim_trace_to_sbbt <input_trace> <output_file_basename>
+champsim_trace_to_sbbt <input_trace> <output_trace>
 ```
 
 The translator uses [`zstd`] to compress the traces, which is the compression tool that has proven to give the best compression ratio and decompression speed for MBPlib's traces. Thus, you need to have [`zstd`] installed.
