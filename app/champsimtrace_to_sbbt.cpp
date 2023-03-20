@@ -76,6 +76,7 @@ int main(int argc, char* argv[]) {
       opcode = RET | IND;
     }
     if (readsFlags) opcode |= CND;
+    else cstraceInstr.branch_taken = 1;
     if (readsOther) opcode |= IND;
     if (!cstraceInstr.branch_taken) cstraceInstr.branch_target = 0;
 
